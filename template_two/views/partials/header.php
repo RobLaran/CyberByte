@@ -14,11 +14,11 @@
         </li>
 
         <!-- Categories Dropdown -->
-        <li class="dropdown">
+        <li class="dropdown <?= (isURL('/desktops', $basePath) || isURL('/laptops', $basePath)) ? 'active' : '' ?>">
           <a href="#">Categories ▾</a>
           <ul class="dropdown-menu">
-            <li><a href="<?= routeTo('/desktop') ?>">Desktops</a></li>
-            <li><a href="<?= routeTo('/laptop') ?>">Laptops</a></li>
+            <li><a href="<?= routeTo('/desktops') ?>">Desktops</a></li>
+            <li><a href="<?= routeTo('/laptops') ?>">Laptops</a></li>
           </ul>
         </li>
 

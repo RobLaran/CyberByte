@@ -1,0 +1,43 @@
+/* about.css */
+
+.about-section {
+  background-color: #222;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.about-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-section p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #ccc;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-section ul {
+  list-style: none;
+  padding: 0;
+  color: #aaa;
+  font-size: 1rem;
+}
+
+.about-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.about-section .footer-note {
+  margin-top: 3rem;
+  color: #888;
+  font-size: 0.95rem;
+}

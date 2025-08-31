@@ -1,0 +1,281 @@
+/* ====== GLOBAL ====== */
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+
+  display: grid;
+    grid-template-rows: 5rem 1fr 3rem;
+    grid-template-columns: 200px repeat(3, 1fr);
+    grid-template-areas: 
+        "header header header header"
+        "content content content content"
+        "footer footer footer footer"
+    ;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ====== HEADER ====== */
+header {
+  grid-area: header;
+  display: grid;
+  background: #1e293b;
+  color: white;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 0;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #0096c7;
+}
+
+.logo {
+  height: 40px;
+}
+
+.dev {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ====== NAVIGATION ====== */
+.main-nav ul.main-nav-list {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.main-nav a {
+  color: white;
+  font-weight: 500;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav .active a {
+  background: #48cae4;
+  color: white;
+}
+
+/* ====== DROPDOWN ====== */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 1.75rem;
+  left: 0;
+  background: #48cae4;
+  border-radius: 6px;
+  padding: 0.5rem 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  min-width: 150px;
+  z-index: 100;
+}
+
+.dropdown-menu li {
+  padding: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: 500;
+}
+
+.dropdown-menu a:hover {
+  background: #0f172a;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* ====== SEARCH BAR ====== */
+.search-input-container {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.search-input-container input {
+  border: none;
+  outline: none;
+  padding: 0.4rem 0.6rem;
+}
+
+.search-input-container button {
+  background: #48cae4;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+}
+
+.search-input-container button:hover {
+  background: #0096c7;
+}
+
+.nav-right {
+    display: flex;
+    column-gap: 20px;
+}
+
+/* ====== NAV ICONS ====== */
+.nav-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-icons a {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.nav-icons .active a,
+.nav-icons a:hover {
+  color: #48cae4;
+}
+
+/* ====== CONTENT ====== */
+.content {
+  grid-area: content;
+}
+
+
+/* ====== HERO ====== */
+.hero {
+  background: url('../../img/hero2.jpg') no-repeat center center/cover;
+  padding: 3rem 1rem;
+  color: white;
+  height: 50vh;
+  text-align: center;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  background: white;
+  color: #0f172a;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #e2e8f0;
+}
+
+/* ====== PRODUCTS ====== */
+.products {
+  padding: 2rem 0;
+}
+
+.products h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  background: white;
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.product-card button {
+  background: #48cae4;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background: #0096c7;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  grid-area: footer;
+  background: #1e293b;
+  color: white;
+  text-align: center;
+  padding: 1rem 1rem;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #48cae4;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

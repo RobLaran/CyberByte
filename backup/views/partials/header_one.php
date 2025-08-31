@@ -14,16 +14,18 @@
 
             <div class="nav-icon-container">
                 <ul class="nav-icons">
-                    <li class="nav-icon-link login <?= isURL('/about', $basePath) ? 'active' : '' ?>">
+                    <li class="nav-icon-link about <?= isURL('/about', $basePath) ? 'active' : '' ?>">
                         <a href="<?= routeTo('/about') ?>">
                             <i class="fa-solid fa-circle-info"></i>
                         </a>
                     </li>
+                    
                     <li class="nav-icon-link contact <?= isURL('/contact', $basePath) ? 'active' : '' ?>">
                         <a href="<?= routeTo('/contact') ?>">
-                            <i class="fa-regular fa-phone"></i>
+                            <i class="fa-solid fa-phone"></i>
                         </a>
                     </li>
+
                     <li class="nav-icon-link login <?= isURL('/login', $basePath) ? 'active' : '' ?>">
                         <a href="<?= routeTo('/login') ?>">
                             <i class="fa-regular fa-user"></i>

@@ -2,11 +2,11 @@
   <div class="container">
     <h2><?= $title ?></h2>
     <div class="product-grid">
-        <?php foreach($desktops as $desktop): ?>
+        <?php foreach($laptops as $laptop): ?>
             <div class="product-card card">
-                <img src="<?= $desktop->imgURL ?>" alt="desktop">
-                <h3><?= $desktop->title ?></h3>
-                <p>₱<?= number_format($desktop->price, 2) ?></p>
+                <img src="<?= $laptop->imgURL ?>" alt="desktop">
+                <h3><?= $laptop->title ?></h3>
+				<p>₱<?= number_format($laptop->price, 2) ?></p>
                 <button>Buy</button>
             </div>
 

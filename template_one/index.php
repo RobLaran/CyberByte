@@ -2,19 +2,9 @@
 session_start();
 
 $basePath = dirname($_SERVER['SCRIPT_NAME']); // Change if your app is in a subdirectory
-require 'functions.php';
-require 'config.php';
+require '../functions.php';
+require '../config.php';
 
-
-if (!isset($_SESSION['template'])) {
-    $_SESSION['template'] = 'one'; // default template
-}
-
-if (isset($_GET['change_template'])) {
-    $_SESSION['template'] = $_SESSION['template'] === 'one' ? 'two' : 'one';
-    header("Location: " . strtok($_SERVER["REQUEST_URI"], '?')); // redirect to remove query
-    exit;
-}
 
 $uri = getURI($basePath);
 
@@ -24,11 +14,11 @@ switch ($uri) {
         require 'controllers/home.php';
         break;
 
-    case '/desktop':
+    case '/desktops':
         require 'controllers/desktop.php';
         break;
 
-    case '/laptop':
+    case '/laptops':
         require 'controllers/laptop.php';
         break;
 
