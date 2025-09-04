@@ -5,7 +5,6 @@ $basePath = dirname($_SERVER['SCRIPT_NAME']); // Change if your app is in a subd
 require '../functions.php';
 require '../config.php';
 
-
 $uri = getURI($basePath);
 
 switch ($uri) {

@@ -14,9 +14,9 @@
     <div class="product-grid">
         <?php foreach($featuredProducts as $product): ?>
             <div class="product-card card">
-                <img src="<?= $product->imgURL ?>" alt="desktop">
-                <h3><?= $product->title ?></h3>
-                <p>₱<?= number_format($product->price, 2) ?></p>
+                <img src="<?= $product['image'] ?>" alt="desktop">
+                <h3><?= $product['title'] ?></h3>
+                <p>₱<?= number_format($product['price'], 2) ?></p>
                 <button>Buy</button>
             </div>
 

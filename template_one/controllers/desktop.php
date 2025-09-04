@@ -1,5 +1,5 @@
 <?php
-require '../data/desktop.php';
+$desktops = require '../data/desktop.php';
 
 $title = "Desktops";
 

@@ -5,9 +5,9 @@
         <?php foreach($desktops as $desktop): ?>
           
             <div class="product-card card">
-                <img src="<?= $desktop->imgURL ?>" alt="desktop">
-                <h3><?= $desktop->title ?></h3>
-                <p>₱<?= number_format($desktop->price, 2) ?></p>
+                <img src="<?= $desktop['image'] ?>" alt="desktop">
+                <h3><?= $desktop['title'] ?></h3>
+                <p>₱<?= number_format($desktop['price'], 2) ?></p>
                 <button>Buy</button>
             </div>
 

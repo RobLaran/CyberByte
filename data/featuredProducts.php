@@ -1,6 +1,6 @@
 <?php
-require 'desktop.php';
-require 'laptop.php';
+$desktops = require 'desktop.php';
+$laptops = require 'laptop.php';
 
 $featuredProducts = [
     $desktops[0],
@@ -8,3 +8,5 @@ $featuredProducts = [
     $desktops[4],
     $laptops[4]
 ];
+
+return $featuredProducts;

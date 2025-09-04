@@ -1,8 +1,10 @@
 <?php
 $title = "Home";
 
+$featuredProducts = require '../data/featuredProducts.php';
+
 ob_start();
-require '../data/featuredProducts.php';
+
 require 'views/pages/home.view.php';
 
 $content = ob_get_clean();
